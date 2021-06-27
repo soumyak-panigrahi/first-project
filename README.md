@@ -1,5 +1,5 @@
 # first-project
-First project to learn, How Git ang GitHub interacts
+First project to learn, How Git and GitHub interacts
 
 ## Leasson 1
 
