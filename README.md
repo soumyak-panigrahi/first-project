@@ -17,7 +17,7 @@ the info within the URL as
 
 Note :- Password and/or Username has Special Charcter use the special code , eg. for @ - %40
 
-# Lesson 2
+## Lesson 2
 
 to update the REMOTE REPOSITORY use
 
@@ -27,7 +27,7 @@ to get updated REMOTE REPSITORY
 
 $ git pull
 
-# Lesson 3
+## Lesson 3
 
 To see changes in the repo we have to use,
 
