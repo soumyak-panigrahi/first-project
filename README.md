@@ -26,3 +26,9 @@ $ git push
 to get updated REMOTE REPSITORY
 
 $ git pull
+
+# Lesson 3
+
+To see changes in the repo we have to use,
+
+$ git fetch
