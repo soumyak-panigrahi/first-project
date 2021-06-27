@@ -19,10 +19,10 @@ Note :- Password and/or Username has Special Charcter use the special code , eg.
 
 # Lesson 2
 
-to update the SEVER REPOSITORY use
+to update the REMOTE REPOSITORY use
 
 $ git push
 
-to get updated REPSITORY
+to get updated REMOTE REPSITORY
 
 $ git pull
