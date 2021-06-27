@@ -16,3 +16,13 @@ the info within the URL as
 ###### http://username:password@github.com/username/repo.git
 
 Note :- Password and/or Username has Special Charcter use the special code , eg. for @ - %40
+
+# Lesson 2
+
+to update the SEVER REPOSITORY use
+
+$ git push
+
+to get updated REPSITORY
+
+$ git pull
