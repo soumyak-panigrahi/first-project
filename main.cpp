@@ -8,5 +8,6 @@ int main()
     std::cout << "GOOD BYE!!!!!!! World" << std::endl;
     while(true)
         std::cout<<false<<std::endl;
+    std::cout<<"This will not be print as it either crash or loop around"<<std::endl;
     return 0;
 }
