@@ -13,14 +13,15 @@ struct queueNode
 {
     void* data;
     sPtrQueueNode link;
+    queueNode() : data{ nullptr }, link{ nullptr } { }
 };
 
 class queue
 {
-    sPtrQueueNode top;
+    sPtrQueueNode head, tail;
     size_t size;
 public:
-    queue() : top{ nullptr }, size{ 0 } { }
+    queue() : head{ nullptr }, tail{ nullptr }, size{ 0 } { }
     bool push(void*);
     void* pop();
 };
