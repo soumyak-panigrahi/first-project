@@ -1,3 +1,6 @@
+# Log File
+*.txt
+
 # Prerequisites
 *.d
 
