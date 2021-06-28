@@ -22,7 +22,7 @@ class queue
 public:
     queue() : top{ nullptr }, size{ 0 } { }
     bool push(void*);
-    void* pop();
+    void* pop() noexcept;
 };
 
 #endif 

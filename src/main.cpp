@@ -1,6 +1,6 @@
 #include <iostream>
-#include "include/stack.h"
-#include "include/queue.h"
+#include "stack.h"
+#include "queue.h"
 
 int main()
 {

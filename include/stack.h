@@ -13,6 +13,7 @@ struct stackNode
 {
     void* data;
     sPtrStackNode link;
+    stackNode() : data{ nullptr }, link{ nullptr } { }
 };
 
 class stack
@@ -22,7 +23,7 @@ class stack
 public:
     stack() : top{ nullptr }, size{ 0 } { }
     bool push(void*);
-    void* pop();
+    void* pop() noexcept;
 };
 
 #endif 
