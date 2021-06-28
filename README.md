@@ -35,4 +35,4 @@ $ git fetch
 
 ## Lesson 4
 
-To be continued
+push does work if the repo is tangled
