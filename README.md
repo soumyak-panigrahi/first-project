@@ -32,3 +32,7 @@ $ git pull
 To see changes in the repo we have to use,
 
 $ git fetch
+
+## Lesson 4
+
+To be continued
