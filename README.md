@@ -36,3 +36,10 @@ $ git fetch
 ## Lesson 4
 
 push does work if the repo is tangled
+
+To do :
+
+- [x] a
+- [ ] b
+- [ ] c
+- [ ] d
