@@ -16,7 +16,7 @@ bool queue::push(void* data)
     return false;
 }
 
-void* queue::pop()
+void* queue::pop() noexcept
 {
     if (head) {
         auto temp{ head };
