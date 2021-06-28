@@ -23,6 +23,7 @@ void* queue::pop() noexcept
         if (!head->link)
             tail = head->link;
         head = temp->link;
+        size--;
         return temp->data;
     }
     return nullptr;

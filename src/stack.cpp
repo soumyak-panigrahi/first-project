@@ -17,9 +17,10 @@ bool stack::push(void* data)
 void* stack::pop() noexcept
 {
     if (top) {
-        auto data{ top->data };
+        auto poped_data{ top->data };
         top = top->link;
-        return data;
+        return poped_data;
+        size--;
     }
     return nullptr;
 }
