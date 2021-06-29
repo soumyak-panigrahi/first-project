@@ -44,7 +44,10 @@ before each branch as to avoid conflicts. Similar to `git branch` , we have `git
 to view all remote repo info
 
 `$ git remote` 
-`$ git remote [--verbose]` //if too much info needed
+
+To view more about given remote repo
+
+`$ git remote <remote-name> [--verbose]` 
 
 when we clone any repo , the default repo will be represented by origin. We change it by using
 
@@ -56,5 +59,5 @@ we add few remote which is just like branches, with our customizied name , with
 
 To get more detail about a repo
 
-`$ git remote show <remote-name>` // similar to `$ git show` for commits 
+`$ git remote show <remote-name>` // similar to `$ git show <commit-id>` for commits 
 
