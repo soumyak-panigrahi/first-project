@@ -65,18 +65,18 @@ To get more detail about a repo
 
 While collabrating we have to be very careful not messing up, the normal stream of flow is 
 
-- First we do work is our local repo, it has no link what so ever with remote yet.
-- Then we push our work to remote repo, to do so we have to be up to date with the remote.
- - if not, we have to `$ git fetch [<remote-name>]`, then we merge the updated work to our work.
-  - This can also be done `$ git pull <remote-name> <branch-name>`, this will fetch and merge.
- - if you are, just push it to repo.
-  - if you want to push, a separate branch use `$ git push <remote-name> <branch-name>`.
-   - if branch exist, it will be updated.
-   - if doesn't exist , it will be created with branching from the master of the repo.
-  - if you want to push, a branch to update a different named remote-branch use `$ git push <remote-name> <branch-name>:<remote-branch-name>` 
-- If you like to remove a remote branch `$ git push <remote-name> :<branch-name>`
+* First we do work is our local repo, it has no link what so ever with remote yet.
+* Then we push our work to remote repo, to do so we have to be up to date with the remote.
+    * if not, we have to `$ git fetch [<remote-name>]`, then we merge the updated work to our work.
+        * This can also be done `$ git pull <remote-name> <branch-name>`, this will fetch and merge.
+    * if you are, just push it to repo.
+        * if you want to push, a separate branch use `$ git push <remote-name> <branch-name>`.
+            * if branch exist, it will be updated.
+            * if doesn't exist , it will be created with branching from the master of the repo.
+    * if you want to push, a branch to update a different named remote-branch use `$ git push <remote-name> <branch-name>:<remote-branch-name>` 
+* If you like to remove a remote branch `$ git push <remote-name> :<branch-name>`
 
 Note ::
-- You can always use HEAD in place of the branch-name
-- while `$ git push` you use -u flag `$ git push -u <remote-name> <branch-name>` it will update the working branch in repo, so that you don't have give <branch-name> argument in pull.
-- You can always update the working branch in repo using `git branch -u <remote-name> <branch-name>`  
+* You can always use HEAD in place of the branch-name
+* while `$ git push` you use -u flag `$ git push -u <remote-name> <branch-name>` it will update the working branch in repo, so that you don't have give <branch-name> argument in pull.
+* You can always update the working branch in repo using `git branch -u <remote-name> <branch-name>`  
