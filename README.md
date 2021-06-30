@@ -75,8 +75,29 @@ While collabrating we have to be very careful not messing up, the normal stream 
             * if doesn't exist , it will be created with branching from the master of the repo.
     * if you want to push, a branch to update a different named remote-branch use `$ git push <remote-name> <branch-name>:<remote-branch-name>` 
 * If you like to remove a remote branch `$ git push <remote-name> :<branch-name>`
+    * you can also use `$ git push <remote> --delete <branch-name>` , this is more intutive.
 
 Note ::
 * You can always use HEAD in place of the branch-name
 * while `$ git push` you use -u flag `$ git push -u <remote-name> <branch-name>` it will update the working branch in repo, so that you don't have give <branch-name> argument in pull.
 * You can always update the working branch in repo using `git branch -u <remote-name> <branch-name>`  
+
+## Lesson 6
+
+To adjust commit history within the branch, we play it using `$ git reset [option] [commit-ID]`
+
+\[option\] has Three type --soft , --mixed and --hard
+
+* --soft, in this the HEAD will point to the commit ID , but the INDEX (Staing Area) and Working Tree is untouched.
+* --mixed, is similar to --soft in regards to HEAD and Working Tree but in this the INDEX to set to match the given commit ID.
+* --hard, it is little horrendous in regards to version control it changes evergthing to match that commit ID . In a way the future commit ID doesn't exist as far as the GIT knows.
+
+
+Ofcousre there is safer way to **revisit** past commit ID then merge accordingly, this doesn't adjust commit history what so ever 
+it just make a new branch with matching every detail to the commit ID. using
+
+`$ git checkout -b <branch-name> [commit-ID]` , this create a new branch with given name, with it's base at that commit ID. So, that we make change and then can be merged.
+ 
+The idea of merging is simple, the base branch doesn't have any commit after the branched point , then merging will simple add 
+these commit as base one (fast-forward). But if there are commit passed from the branch-off point , this may lead to conflicts
+first we have resolve it manually and then merge.
