@@ -101,3 +101,9 @@ it just make a new branch with matching every detail to the commit ID. using
 The idea of merging is simple, the base branch doesn't have any commit after the branched point , then merging will simple add 
 these commit as base one (fast-forward). But if there are commit passed from the branch-off point , this may lead to conflicts
 first we have resolve it manually and then merge.
+
+# Lesson 7
+
+Suppose, your working in **_local_** branch , you have a branch which is updated by someone else (ofcoure remotely).
+So, first your work is to be sync with remote repo regularly (either automated or manually), once you done that it for you merge 
+the changes in to your working *local* branch , if conflicts solve it . then it will create a commmit to merge 
