@@ -136,7 +136,6 @@ using,
 ```
 $ git checkout working-local-branch
 $ git merge bsese-branch
-
 ```
 
 ```
@@ -166,3 +165,9 @@ To take the liberty use `$ git rebase -i base-branch` .
 
 So, this should only be used in local repo , as commit history is changed. And it makes it linear , in other words your solving 
 all merging conflicts so that it can be easily merged by your colleage.
+
+## Lesson 8
+
+In GITHUB , whenever we like contribute to someone else's project. Then what GTHUB does is fork it , in other words, it will make
+copy of the project in your repo. So, that you make changes to your own copy . Then, call the author of the original project
+a pull request, which is a request to merge to your project as to update it original repo content.
