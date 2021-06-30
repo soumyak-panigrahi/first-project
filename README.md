@@ -100,10 +100,69 @@ it just make a new branch with matching every detail to the commit ID. using
  
 The idea of merging is simple, the base branch doesn't have any commit after the branched point , then merging will simple add 
 these commit as base one (fast-forward). But if there are commit passed from the branch-off point , this may lead to conflicts
-first we have resolve it manually and then merge.
+first we have resolve it manually and then merge (Three-way).
 
 # Lesson 7
 
 Suppose, your working in **_local_** branch , you have a branch which is updated by someone else (ofcoure remotely).
 So, first your work is to be sync with remote repo regularly (either automated or manually), once you done that it for you merge 
-the changes in to your working *local* branch , if conflicts solve it . then it will create a commmit to merge 
+the changes in to your working *local* branch , if conflicts solve it . then it will create a commmit to merge, it totally fine
+this how thing should be done if it a remote branch.
+
+If you know, it a local branch then you can take some liberty to make things easy for you, by rearranging the commit as to make it linear as to increase it's readbility.
+
+Note - () is rep. Commit , (*) is rep. changed commit of commit () 
+
+Intial, 
+
+```
+()->()->()->() - BASE Branch
+             \
+             ()->()->()->() - Working Branch 
+```
+
+Suppose someone is working in the base-branch , then 
+
+```
+()->()->()->()->()->()->() - BASE Branch
+             \
+             ()->()->()->() - Working Branch 
+```
+
+Path-I - 
+
+using,
+
+```
+$ git checkout working-local-branch
+$ git merge bsese-branch
+
+```
+
+```
+()->()->()->()--()-->()--->() - BASE Branch
+             \              \
+             ()->()->()->()->(Merge Commit) - Working Branch 
+```
+
+PATH - II
+
+using,
+
+```
+$ git checkout working-local-branch
+$ git rebase base-branch
+```
+```
+()->()->()->()-()->()->() - BASE Branch
+                        \
+                        (*)->(*)->(*)->(*) - Working Branch 
+```
+
+In this path, the base is changed to the latest commit , its just like changing HEAD. But in this case you will have a lot
+of liberty to change commit history inbetween.
+
+To take the liberty use `$ git rebase -i base-branch` .
+
+So, this should only be used in local repo , as commit history is changed. And it makes it linear , in other words your solving 
+all merging conflicts so that it can be easily merged by your colleage.
